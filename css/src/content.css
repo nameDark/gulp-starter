@@ -1,0 +1,53 @@
+.content {
+    @apply text-sm leading-tight
+}
+.content p, .content ol, .content ul, .about-content p, .content h1, .content h2, .content h3 {
+    @apply mb-2
+}
+.content h2 {
+    font-size: 1.8rem;
+}
+.content h3 {
+    font-size: 1.25rem;
+}
+@screen md {
+    .content p, .content ol, .content ul, .about-content p, .content h1, .content h2, .content h3 {
+        @apply mb-4
+    }
+    .content h2 {
+        font-size: 2rem;
+    }
+    .content h3 {
+        font-size: 1.4rem;
+    }
+}
+@screen xl {
+    .content h2 {
+        font-size: 2.2rem;
+    }
+    .content h3 {
+        font-size: 1.55rem;
+    }
+}
+.content a {
+    @apply text-blue
+}
+.content ol {
+    @apply list-decimal pl-10
+}
+.content ul {
+    @apply list-disc pl-10
+}
+.content li {
+    @apply mb-2
+}
+.content hr {
+    @apply my-6 border-body
+}
+.content b, .content strong {
+    @apply font-black
+}
+.bolder b,
+.bolder strong {
+    @apply font-black
+}

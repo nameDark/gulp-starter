@@ -1,0 +1,53 @@
+/* FLASHJS - THEME */
+.flash-container {
+    z-index: 1000;
+    @apply right-3 left-3 max-w-full top-1/2 -translate-y-1/2 fixed
+}
+@screen l {
+    .flash-container {
+        @apply w-full max-w-xl left-1/2 -translate-x-1/2
+    }
+}
+.flash-container .flash-message {
+    box-shadow: 0 0 20px var(--tw-shadow-color);
+    @apply cursor-pointer bg-white transition-all -translate-x-5 opacity-0 relative rounded-2xl overflow-hidden text-sm
+}
+.flash-container .flash-message .flash-progress {
+    @apply absolute right-0 top-auto bottom-0 left-0 w-px h-1 opacity-100 transition-opacity
+}
+.flash-container .flash-message .flash-progress.is-hidden {
+    @apply opacity-0
+}
+.flash-container .flash-message .flash-progress.flash-progress-top {
+    @apply top-0 bottom-auto
+}
+.flash-container .flash-message.is-visible {
+    @apply opacity-100 translate-x-0
+}
+.flash-container .flash-message.flash-success {
+    @apply shadow-green/60
+}
+.flash-container .flash-message.flash-success .flash-progress {
+    @apply bg-green bg-opacity-30
+}
+.flash-container .flash-message.flash-error {
+    @apply shadow-red/60
+}
+.flash-container .flash-message.flash-error .flash-progress {
+    @apply bg-red bg-opacity-30
+}
+
+.flash-container .flash-message.flash-info {
+    @apply shadow-blue/60
+}
+.flash-container .flash-message.flash-info .flash-progress {
+    @apply bg-blue bg-opacity-30
+}
+.flash-message .match:after {
+    @apply w-48 h-2
+}
+@screen l {
+    .flash-message .match:after {
+        @apply max-w-xs h-2 w-full
+    }
+}

@@ -1,0 +1,131 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+	html {
+		font-size: 16px;
+		color: #323232;
+		font-family: "Montserrat", sans-serif;
+		@apply overflow-x-hidden
+	}
+
+	h1, .h1 {
+		font-size: 5.75rem;
+	}
+
+	h2, .h2 {
+		font-size: 2.125rem;
+	}
+
+	h3, .h3 {
+		font-size: 1.625rem;
+	}
+
+	h4, .h4 {
+		font-size: 1.1875rem;
+	}
+
+	p {
+		margin-bottom: 0.5rem;
+	}
+}
+.montserrat {
+	font-family: "Montserrat", sans-serif;
+}
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+table,
+table tr,
+tr td,
+table tbody,
+table thead,
+table tfoot,
+table tr th,
+table tfoot tr td {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-image: none;
+	font-family: "Montserrat", sans-serif;
+}
+table div, table span {
+	font-family: "Montserrat", sans-serif;
+}
+table.tickets-table {
+	border-spacing: 0 5px;
+}
+table.tickets-table tr th {
+	border-top: 1px solid #232323;
+	border-bottom: 1px solid #232323;
+	@apply back-body white text-xs font-bold
+}
+table.tickets-table tr td {
+	border-top: 1px solid rgba(35, 35, 35, 0.35);
+	border-bottom: 1px solid rgba(35, 35, 35, 0.35);
+	@apply text-sm leading-none
+}
+table.tickets-table tr td,
+table.tickets-table tr th {
+	padding-left: 3px;
+	padding-right: 3px;
+	@apply py-3
+}
+table.tickets-table tr td:first-child,
+table.tickets-table tr th:first-child {
+	border-left: 1px solid #232323;
+	@apply rounded-l-lg
+}
+table.tickets-table tr td:first-child {
+	border-left: 1px solid rgba(35, 35, 35, 0.35);
+}
+table.tickets-table tr td:last-child,
+table.tickets-table tr th:last-child {
+	border-right: 1px solid #232323;
+	@apply rounded-r-lg pr-4
+}
+table.tickets-table tr td:last-child {
+	border-right: 1px solid rgba(35, 35, 35, 0.35);
+}
+.lightbody-border {
+	border-color: #969696;
+}
+.page-break {
+	page-break-after: always;
+}
+.rounded-5xl {
+	border-radius: 2.8rem;
+}
+.white {
+	color: #fff;
+}
+.lightbody {
+	color: #969696;
+}
+.blue {
+	color: #003AD8;
+}
+.back-lightbody {
+	background-color: #969696;
+}
+.back-blue {
+	background-color: #003AD8;
+}
+.back-body {
+	background-color: #323232;
+}
+.pdf-container {
+	max-width: 1190px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.avoid-break {
+	page-break-inside: avoid;
+}

@@ -1,0 +1,199 @@
+@layer base {
+    label {
+        @apply mb-1 text-body block text-sm font-light
+    }
+    input[type="submit"],
+    form button,
+    .btn {
+        @apply w-full text-xl px-7 py-1 flex items-center justify-center text-body uppercase rounded-full transition transition-all duration-500 bg-transparent border-blue border text-center cursor-pointer font-black
+    }
+    .btn {
+        @apply inline-flex
+    }
+    /*form button,*/
+    /*form [type='button'],*/
+    /*form [type='reset'],*/
+    /*form [type='submit'] {*/
+    /*    @apply bg-blue border-blue*/
+    /*}*/
+    input[type="submit"]:hover,
+    /*input[type="submit"]:focus,*/
+    form button:hover,
+    /*form button:focus,*/
+    .btn:hover {
+        @apply text-white bg-blue
+    }
+    input[type="submit"]:active,
+    form button:active,
+    .btn:active {
+        @apply text-white bg-blue
+    }
+    /*!*button:focus {*!*/
+    /*!*    outline: none;*!*/
+    /*!*}*!*/
+    .btn-outline {
+        @apply bg-white text-blue
+    }
+    input:focus-visible {
+        outline: none;
+    }
+    .form-input-wrap {
+        @apply relative
+    }
+    .form-input,.form-textarea,.form-select,.form-multiselect {
+        @apply block px-6 h-10 text-body text-base rounded-3xl leading-normal bg-white appearance-none border-black border w-full font-black
+    }
+    .form-textarea {
+        @apply h-auto py-2
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus, .form-multiselect:focus {
+        @apply outline-2 outline-transparent outline outline-offset-2 border-body ring-opacity-50 ring-body ring-2 ring-offset-0 ring-offset-white
+    }
+    .form-input::placeholder, .form-textarea::placeholder, .form-select::placeholder, .form-multiselect::placeholder {
+        color: #969696;
+        opacity: 1;
+        font-weight: 300;
+    }
+    .form-input::-moz-placeholder, .form-textarea::-moz-placeholder {
+        color: #969696;
+        opacity: 1;
+        font-weight: 300;
+    }
+    .form-input:-ms-input-placeholder, .form-textarea:-ms-input-placeholder {
+        color: #969696;
+        opacity: 1;
+        font-weight: 300;
+    }
+    .form-input::-webkit-datetime-edit-fields-wrapper {
+        @apply p-0;
+    }
+    .form-input::-webkit-date-and-time-value {
+        min-height: 1.5em;
+    }
+    .form-input::-webkit-datetime-edit,.form-input::-webkit-datetime-edit-year-field,.form-input::-webkit-datetime-edit-month-field,.form-input::-webkit-datetime-edit-day-field,.form-input::-webkit-datetime-edit-hour-field,.form-input::-webkit-datetime-edit-minute-field,.form-input::-webkit-datetime-edit-second-field,.form-input::-webkit-datetime-edit-millisecond-field,.form-input::-webkit-datetime-edit-meridiem-field {
+        @apply pt-0 pb-0;
+    }
+    .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' stroke-width='6.5' fill='none' stroke='%23323232' viewBox='0 0 31 20' width='14' height='9' %3e%3cg%3e%3cpath d='m28.6 2.4l-13.1 13-13.1-13'/%3e%3c/g%3e%3c/svg%3e");
+        background-position: right 1rem center;
+        background-repeat: no-repeat;
+        background-size: 14px 9px;
+        padding-right: 2.5rem;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    /*.form-select option {*/
+    /*    @apply text-base*/
+    /*}*/
+    .form-checkbox,.form-radio {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+        @apply p-0 inline-block bg-origin-border shrink-0 select-none align-middle appearance-none text-body border border-body h-5 w-5 bg-white
+    }
+    .form-checkbox {
+        background-size: 12px 10px;
+        @apply rounded-sm mr-2
+    }
+    .form-checkbox:focus {
+        @apply border-blue bg-white
+    }
+    .form-radio {
+        @apply rounded-full
+    }
+    /*.form-checkbox:checked,.form-radio:checked {*/
+    /*    border-color: transparent;*/
+    /*    background-color: currentColor;*/
+    /*    background-size: 100% 100%;*/
+    /*    background-position: center;*/
+    /*    background-repeat: no-repeat;*/
+    /*}*/
+    /*.form-checkbox:checked {*/
+    /*    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");*/
+    /*}*/
+    /*.form-radio:checked {*/
+    /*    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");*/
+    /*}*/
+
+    .form-checkbox:checked {
+        background-size: 12px 10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.98664 13.9478L1.13664 8.09778C0.785183 7.74633 0.785183 7.17648 1.13664 6.82499L2.4094 5.55219C2.76086 5.2007 3.33074 5.2007 3.6822 5.55219L7.62304 9.49299L16.0639 1.0522C16.4153 0.700741 16.9852 0.700741 17.3367 1.0522L18.6094 2.32499C18.9609 2.67645 18.9609 3.2463 18.6094 3.59779L8.25944 13.9478C7.90794 14.2993 7.3381 14.2993 6.98664 13.9478V13.9478Z' fill='%23f16622'/%3E%3C/svg%3E%0A");
+        @apply text-blue bg-white border-body bg-center bg-no-repeat
+    }
+    .form-radio:checked {
+        background: radial-gradient(circle, rgba(241, 102, 34, 1) 0%, rgba(241, 102, 34, 1) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 50%);
+        @apply border-blue bg-center bg-no-repeat
+    }
+    .form-checkbox:hover,
+    .form-checkbox:checked:hover,
+    .form-checkbox:checked:focus {
+        @apply border-blue bg-white
+    }
+    .form-radio:hover,
+    .form-radio:checked:hover,
+    .form-radio:checked:focus {
+        @apply border-blue bg-white
+    }
+    /*.form-checkbox:indeterminate {*/
+    /*    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");*/
+    /*    border-color: transparent;*/
+    /*    background-color: currentColor;*/
+    /*    background-size: 100% 100%;*/
+    /*    background-position: center;*/
+    /*    background-repeat: no-repeat;*/
+    /*}*/
+    /*.form-checkbox:indeterminate:hover,.form-checkbox:indeterminate:focus {*/
+    /*    border-color: transparent;*/
+    /*    background-color: currentColor;*/
+    /*}*/
+    :disabled label,
+    :disabled .form-input,
+    :disabled .form-textarea,
+    :disabled .form-select,
+    label:disabled,
+    .form-input:disabled,
+    .form-textarea:disabled,
+    .form-select:disabled {
+        color: #aaaaaa;
+    }
+    :disabled label,
+    label:disabled {
+        cursor: default!important;
+    }
+    :disabled .form-checkbox:checked,
+    .form-checkbox:checked:disabled {
+        background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.98664 13.9478L1.13664 8.09778C0.785183 7.74633 0.785183 7.17648 1.13664 6.82499L2.4094 5.55219C2.76086 5.2007 3.33074 5.2007 3.6822 5.55219L7.62304 9.49299L16.0639 1.0522C16.4153 0.700741 16.9852 0.700741 17.3367 1.0522L18.6094 2.32499C18.9609 2.67645 18.9609 3.2463 18.6094 3.59779L8.25944 13.9478C7.90794 14.2993 7.3381 14.2993 6.98664 13.9478V13.9478Z' fill='%23aaaaaa'/%3E%3C/svg%3E%0A");
+    }
+    :disabled .form-checkbox:hover,
+    :disabled .form-checkbox:focus,
+    .form-checkbox:hover:disabled,
+    .form-checkbox:focus:disabled {
+        @apply border-body;
+    }
+    .form-group {
+        @apply relative mb-4
+    }
+    .help-block {
+        @apply px-4 text-xs text-red
+    }
+    .help-block.help-block-error,
+    .form-error {
+        max-width: calc(100% - 1rem);
+        top: 2rem;
+        z-index: 1;
+        @apply w-max absolute text-xs left-1/2 transform -translate-x-1/2 text-white bg-red px-2 rounded-lg
+    }
+    .is-invalid .form-checkbox,
+    .is-invalid .form-input,
+    .is-invalid .form-select,
+    .is-invalid .form-multiselect,
+    .is-invalid .form-textarea {
+        @apply border-red
+    }
+    /*.is-valid .form-checkbox,*/
+    /*.is-valid .form-input,*/
+    /*.is-valid .form-select,*/
+    /*.is-valid .form-multiselect,*/
+    /*.is-valid .form-textarea {*/
+    /*    @apply border-green*/
+    /*}*/
+}

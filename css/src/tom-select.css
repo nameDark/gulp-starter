@@ -1,0 +1,139 @@
+.ts-wrapper.single .ts-control,
+.ts-wrapper.single .ts-control input {
+	@apply cursor-pointer
+}
+
+.plugin-clear_button .clear-button {
+	@apply absolute opacity-0 top-1/2 -translate-y-1/2 right-9 bg-transparent cursor-pointer mr-0 transition-opacity text-xl
+}
+
+.plugin-clear_button.focus.has-items .clear-button,
+.plugin-clear_button:not(.disabled):hover.has-items .clear-button {
+	@apply opacity-100
+}
+
+.plugin-dropdown_input .dropdown-input {
+	border-width: 1px 0;
+	@apply py-3 px-2 w-full block border-body
+}
+
+.ts-wrapper {
+	@apply relative
+}
+
+.is-invalid .ts-wrapper.invalid .ts-control,
+.is-invalid .ts-wrapper .ts-control {
+	@apply border-red border-opacity-50
+}
+
+.is-valid .ts-wrapper.invalid .ts-control,
+.is-valid .ts-wrapper .ts-control {
+	@apply border-green border-opacity-50
+}
+
+.ts-control, .ts-control input, .ts-dropdown {
+	@apply text-base
+}
+
+@screen md {
+	.ts-control, .ts-control input, .ts-dropdown {
+		@apply text-sm
+	}
+}
+.ts-control {
+	z-index: 1;
+	min-height: 2.9rem;
+	@apply border border-body w-full relative py-3 pl-2 pr-10 overflow-hidden flex flex-wrap rounded bg-white
+}
+
+.ts-dropdown .option {
+	@apply truncate
+}
+
+.ts-control:focus {
+	outline: 0;
+}
+
+.disabled .ts-control, .disabled .ts-control * {
+	cursor: default !important
+}
+
+.disabled .ts-control {
+	@apply opacity-50
+}
+
+.ts-dropdown {
+	z-index: 1;
+	@apply absolute bg-white w-full top-full left-0 border border-body rounded-b border-t-0 mt-1 shadow
+}
+
+.ts-dropdown [data-selectable] {
+	@apply cursor-pointer overflow-hidden
+}
+
+.ts-dropdown .active, .ts-dropdown .option:hover {
+	background-color: #f5fafd;
+}
+
+.ts-dropdown .no-results, .ts-dropdown .option {
+	@apply px-2 py-1
+}
+
+.ts-dropdown-content {
+	overflow-scrolling: touch;
+	max-height: 200px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	@apply text-sm
+}
+
+.ts-dropdown-content::-webkit-scrollbar {
+	@apply w-1.5
+}
+
+.ts-dropdown-content::-webkit-scrollbar-track {
+	@apply bg-body rounded
+}
+
+.ts-dropdown-content::-webkit-scrollbar-thumb {
+	box-shadow: 0 3px 1px rgba(0, 0, 0, 0.161);
+	@apply bg-body rounded
+}
+
+.ts-hidden-accessible {
+	clip: rect(0 0 0 0) !important;
+	border: 0 !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	width: 1px !important
+}
+
+.ts-wrapper.single .ts-control:after {
+	content: '';
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23121316' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-print-color-adjust: exact;
+	color-adjust: exact;
+	width: 1.125rem;
+	height: 1.125rem;
+	@apply absolute block top-1/2 -translate-y-1/2 right-2
+}
+
+.ts-wrapper.single.input-active .ts-control,
+.ts-wrapper.single.input-active .ts-control input {
+	@apply cursor-text
+}
+
+.dropdown-active .ts-control {
+	@apply rounded-b-none
+}
+
+.ts-wrapper.form-select {
+	@apply p-0 border-0
+}

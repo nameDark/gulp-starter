@@ -1,0 +1,18 @@
+@import '../src/fonts.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '../src/custom-base.css';
+@import '../src/form-control.css';
+@import '../src/base.css';
+@import '../src/content.css';
+@import '../src/flash.css';
+
+@import '../src/tom-select.css';
+
+@import 'tiny-slider/dist/tiny-slider.css';
+@import '../tns.css';
+
+@import 'simplelightbox/dist/simple-lightbox.min.css';
